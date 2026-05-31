@@ -62,7 +62,9 @@ function downloadFile(url, dest) {
       file.on('finish', () => {
         file.close();
         console.log('\n  yt-dlp downloaded successfully!');
-        if (process.platform !== 'win32') fs.chmodSync(dest, '755');
+        if (process.platform !== 'win32') {
+          fs.chmodSync(dest, 0o755);
+        }
         resolve();
       });
     });
@@ -77,6 +79,9 @@ function downloadFile(url, dest) {
 async function ensureYtDlp() {
   if (fs.existsSync(YTDLP_PATH)) {
     console.log('✓ yt-dlp binary found');
+    if (process.platform !== 'win32') {
+      try { fs.chmodSync(YTDLP_PATH, 0o755); } catch(e) {}
+    }
     return;
   }
   console.log('⏳ Downloading yt-dlp binary...');
