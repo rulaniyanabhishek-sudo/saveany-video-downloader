@@ -90,7 +90,11 @@ async function ensureYtDlp() {
 
 // ── Common yt-dlp args (always include ffmpeg location) ────────────────
 function baseArgs() {
-  const args = ['--no-warnings', '--no-check-certificates'];
+  const args = [
+    '--no-warnings', 
+    '--no-check-certificates',
+    '--extractor-args', 'youtube:player_client=ios,web'
+  ];
   if (FFMPEG_PATH) {
     args.push('--ffmpeg-location', path.dirname(FFMPEG_PATH));
   }
