@@ -9,9 +9,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ── Binary paths ───────────────────────────────────────────────────────
-// On Vercel serverless, filesystem is read-only except /tmp
 const IS_VERCEL = !!process.env.VERCEL;
-const BIN_DIR = IS_VERCEL ? '/tmp/bin' : path.join(__dirname, 'bin');
+const BIN_DIR = path.join(__dirname, 'bin');
 const YTDLP_PATH = path.join(BIN_DIR, process.platform === 'win32' ? 'yt-dlp.exe' : 'yt-dlp');
 
 // ffmpeg-static provides a pre-built ffmpeg binary
