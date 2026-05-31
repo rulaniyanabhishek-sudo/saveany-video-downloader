@@ -382,7 +382,12 @@ main {
   color: var(--text-muted);
 }
 
-.paste-btn {
+.hidden {
+  display: none !important;
+}
+
+.paste-btn,
+.clear-btn {
   display: flex;
   align-items: center;
   gap: 0.35rem;
@@ -400,13 +405,15 @@ main {
   white-space: nowrap;
 }
 
-.paste-btn:hover {
+.paste-btn:hover,
+.clear-btn:hover {
   background: rgba(139, 92, 246, 0.2);
   border-color: rgba(139, 92, 246, 0.35);
   transform: translateY(-1px);
 }
 
-.paste-btn:active {
+.paste-btn:active,
+.clear-btn:active {
   transform: scale(0.97);
 }
 
@@ -1250,6 +1257,7 @@ main {
   }
 
   .paste-btn,
+  .clear-btn,
   .fetch-btn {
     flex: 1;
   }

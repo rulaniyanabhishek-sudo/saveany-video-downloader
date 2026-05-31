@@ -1,6 +1,7 @@
 // ── DOM Elements ────────────────────────────────────────────────────
 const urlInput = document.getElementById('urlInput');
 const pasteBtn = document.getElementById('pasteBtn');
+const clearBtn = document.getElementById('clearBtn');
 const fetchBtn = document.getElementById('fetchBtn');
 const errorToast = document.getElementById('errorToast');
 const errorText = document.getElementById('errorText');
@@ -37,8 +38,22 @@ const HAS_FILE_PICKER = typeof window.showSaveFilePicker === 'function';
 
 // ── Event Listeners ─────────────────────────────────────────────────
 urlInput.addEventListener('input', () => {
-  fetchBtn.disabled = !urlInput.value.trim();
+  const hasText = urlInput.value.trim().length > 0;
+  fetchBtn.disabled = !hasText;
+  if (hasText) {
+    pasteBtn.classList.add('hidden');
+    clearBtn.classList.remove('hidden');
+  } else {
+    pasteBtn.classList.remove('hidden');
+    clearBtn.classList.add('hidden');
+  }
   hideError();
+});
+
+clearBtn.addEventListener('click', () => {
+  urlInput.value = '';
+  urlInput.dispatchEvent(new Event('input'));
+  urlInput.focus();
 });
 
 urlInput.addEventListener('keydown', (e) => {
@@ -49,7 +64,7 @@ pasteBtn.addEventListener('click', async () => {
   try {
     const text = await navigator.clipboard.readText();
     urlInput.value = text;
-    fetchBtn.disabled = !text.trim();
+    urlInput.dispatchEvent(new Event('input'));
     urlInput.focus();
     pasteBtn.style.background = 'rgba(16, 185, 129, 0.2)';
     pasteBtn.style.borderColor = 'rgba(16, 185, 129, 0.4)';
