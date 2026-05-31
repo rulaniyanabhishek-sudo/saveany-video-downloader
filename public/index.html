@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaveAny — Universal Video Downloader</title>
+  <meta name="description" content="Download videos from YouTube, Instagram, Facebook, Snapchat, TikTok and more. All qualities, no size limits.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Animated background -->
+  <div class="bg-gradient"></div>
+  <div class="bg-icons" id="bgIcons"></div>
+
+  <main>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#logoGrad)"/>
+            <path d="M16 8L16 20M16 20L11 15M16 20L21 15" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 23H22" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
+                <stop stop-color="#8B5CF6"/>
+                <stop offset="1" stop-color="#EC4899"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">Save<span class="logo-accent">Any</span></span>
+      </div>
+      <p class="tagline">Download videos from anywhere — no limits</p>
+    </header>
+
+    <!-- Platform badges -->
+    <div class="platforms" id="platforms">
+      <div class="platform-badge" data-platform="youtube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.55A3.02 3.02 0 0 0 .5 6.19 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14c1.87.55 9.38.55 9.38.55s7.5 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.81zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+        <span>YouTube</span>
+      </div>
+      <div class="platform-badge" data-platform="instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.44.41.61.24 1.05.52 1.51.98.46.46.74.9.98 1.51.17.47.36 1.27.41 2.44.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.41 2.44-.24.61-.52 1.05-.98 1.51-.46.46-.9.74-1.51.98-.47.17-1.27.36-2.44.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.44-.41a4.08 4.08 0 0 1-1.51-.98 4.08 4.08 0 0 1-.98-1.51c-.17-.47-.36-1.27-.41-2.44C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.24-1.97.41-2.44.24-.61.52-1.05.98-1.51.46-.46.9-.74 1.51-.98.47-.17 1.27-.36 2.44-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.77 5.77 0 0 0-2.09 1.36A5.77 5.77 0 0 0 .69 4.08C.39 4.84.19 5.72.13 6.99.07 8.27.06 8.68.06 11.94s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.36 2.09a5.77 5.77 0 0 0 2.09 1.36c.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.77 5.77 0 0 0 2.09-1.36 5.77 5.77 0 0 0 1.36-2.09c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.77 5.77 0 0 0-1.36-2.09A5.77 5.77 0 0 0 19.91.69c-.76-.3-1.64-.5-2.91-.56C15.72.07 15.31.06 12.05.06L12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 0-2.88 0 1.44 1.44 0 0 0 2.88 0z"/></svg>
+        <span>Instagram</span>
+      </div>
+      <div class="platform-badge" data-platform="facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+        <span>Facebook</span>
+      </div>
+      <div class="platform-badge" data-platform="tiktok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.01-12.07z"/></svg>
+        <span>TikTok</span>
+      </div>
+      <div class="platform-badge" data-platform="twitter">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        <span>X / Twitter</span>
+      </div>
+      <div class="platform-badge" data-platform="snapchat">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.21 0c3.13.01 5.13 2.09 5.61 5.09.09.59.07 1.19.07 1.79 0 .76.02 1.52.15 2.27.07.38.28.47.62.34.34-.13.65-.32 1-.42.27-.08.56-.1.79.1.23.2.24.49.12.75-.18.39-.56.55-.93.67-.72.23-1.45.44-2.1.83-.94.56-1.47 1.38-1.63 2.47-.03.23.03.37.24.47 1.13.54 2.33.91 3.56 1.15.45.09.72.38.67.78-.07.53-.5.8-1.04.88-.62.1-1.24.06-1.84.2-.65.15-1.06.59-1.29 1.2-.19.49-.46.78-1.01.82-1.03.08-1.87-.44-2.82-.65-.93-.2-1.76-.06-2.55.43-.56.34-1.14.62-1.81.55-.45-.04-.71-.33-.88-.73-.25-.59-.56-1.04-1.22-1.2-.57-.14-1.17-.1-1.76-.19-.61-.09-1.09-.41-1.14-1.01-.04-.41.22-.7.62-.78 1.22-.23 2.42-.59 3.55-1.13.24-.12.31-.27.27-.52-.18-1.12-.74-1.97-1.72-2.54-.6-.35-1.26-.55-1.91-.76-.41-.13-.82-.3-1.02-.74-.16-.35-.06-.67.26-.87.23-.14.49-.15.75-.07.35.11.68.29 1.04.43.29.11.49.05.58-.29.17-.62.19-1.26.2-1.9.01-.79.02-1.58.16-2.36C6.78 2.33 8.72.24 11.62.03c.2-.01.39-.03.59-.03z"/></svg>
+        <span>Snapchat</span>
+      </div>
+      <div class="platform-badge" data-platform="other">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        <span>1000+ more</span>
+      </div>
+    </div>
+
+    <!-- Input Section -->
+    <section class="input-section" id="inputSection">
+      <div class="glass-card input-card">
+        <div class="input-wrapper">
+          <div class="input-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+            </svg>
+          </div>
+          <input
+            type="url"
+            id="urlInput"
+            placeholder="Paste your video link here..."
+            autocomplete="off"
+            spellcheck="false"
+            autofocus
+          />
+          <button id="pasteBtn" class="paste-btn" title="Paste from clipboard">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <span>Paste</span>
+          </button>
+          <button id="fetchBtn" class="fetch-btn" disabled>
+            <span class="fetch-text">Get Video</span>
+            <div class="fetch-loader">
+              <div class="spinner"></div>
+            </div>
+          </button>
+        </div>
+        <div class="input-hint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="16" x2="12" y2="12"/>
+            <line x1="12" y1="8" x2="12.01" y2="8"/>
+          </svg>
+          <span>Supports YouTube, Instagram, Facebook, TikTok, Twitter, Snapchat, Vimeo & 1000+ sites</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Error display -->
+    <div class="error-toast" id="errorToast">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="15" y1="9" x2="9" y2="15"/>
+        <line x1="9" y1="9" x2="15" y2="15"/>
+      </svg>
+      <span id="errorText"></span>
+    </div>
+
+    <!-- Results Section -->
+    <section class="results-section hidden" id="resultsSection">
+      <!-- Video info card -->
+      <div class="glass-card video-info-card">
+        <div class="video-preview">
+          <img id="videoThumbnail" src="" alt="Video thumbnail" />
+          <div class="video-duration" id="videoDuration"></div>
+          <div class="video-platform-badge" id="videoPlatformBadge">
+            <span id="videoPlatformName"></span>
+          </div>
+        </div>
+        <div class="video-details">
+          <h1 id="videoTitle" class="video-title"></h1>
+          <p id="videoUploader" class="video-uploader"></p>
+        </div>
+      </div>
+
+      <!-- Quick Download Section -->
+      <div class="quick-download-section" id="quickDownloadSection">
+        <div class="section-header">
+          <h2 class="section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+            Quick Download
+          </h2>
+          <p class="section-subtitle">One-click download with auto video + audio merge</p>
+        </div>
+        <div class="quick-grid" id="quickGrid">
+          <!-- Populated by JS based on available qualities -->
+        </div>
+      </div>
+
+      <!-- Advanced Formats Toggle -->
+      <button class="advanced-toggle" id="advancedToggle">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+        Show All Formats (Advanced)
+      </button>
+
+      <!-- Format tabs (advanced, collapsed by default) -->
+      <div class="advanced-formats hidden" id="advancedFormats">
+        <div class="format-tabs">
+        <button class="tab active" data-tab="combined" id="tabCombined">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="23 7 16 12 23 17 23 7"/>
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+          </svg>
+          Video + Audio
+          <span class="tab-count" id="countCombined">0</span>
+        </button>
+        <button class="tab" data-tab="videoonly" id="tabVideoOnly">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+            <line x1="7" y1="2" x2="7" y2="22"/>
+            <line x1="17" y1="2" x2="17" y2="22"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <line x1="2" y1="7" x2="7" y2="7"/>
+            <line x1="2" y1="17" x2="7" y2="17"/>
+            <line x1="17" y1="7" x2="22" y2="7"/>
+            <line x1="17" y1="17" x2="22" y2="17"/>
+          </svg>
+          Video Only
+          <span class="tab-count" id="countVideoOnly">0</span>
+        </button>
+        <button class="tab" data-tab="audioonly" id="tabAudioOnly">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13"/>
+            <circle cx="6" cy="18" r="3"/>
+            <circle cx="18" cy="16" r="3"/>
+          </svg>
+          Audio Only
+          <span class="tab-count" id="countAudioOnly">0</span>
+        </button>
+      </div>
+
+      <!-- Format lists -->
+      <div class="formats-container" id="formatsContainer"></div>
+      </div><!-- end .advanced-formats -->
+
+      <!-- New download button -->
+      <button class="new-download-btn" id="newDownloadBtn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+        Download Another Video
+      </button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>SaveAny — Free & Open Source Video Downloader</p>
+  </footer>
+
+  <div class="creator-credit">made by ABHISHEK RULANIYA</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

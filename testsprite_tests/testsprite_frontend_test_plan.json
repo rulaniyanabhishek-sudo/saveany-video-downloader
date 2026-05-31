@@ -1,0 +1,891 @@
+[
+  {
+    "id": "TC001",
+    "title": "Fetch video info from a pasted URL",
+    "description": "This verifies that a user can paste a valid video URL, fetch its information, and see the video preview needed before downloading.",
+    "category": "Paste Video URL and Fetch Video Info",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in a valid video URL"
+      },
+      {
+        "type": "action",
+        "description": "Click the fetch video info control"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the video information preview is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the thumbnail, title, uploader, duration, and platform badge are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Start a quick download from a preset quality",
+    "description": "This verifies that a user can fetch video info and begin a preset quality download from the quick download options.",
+    "category": "Quick Download",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in a valid video URL"
+      },
+      {
+        "type": "action",
+        "description": "Click the fetch video info control"
+      },
+      {
+        "type": "action",
+        "description": "Choose a preset quality download option"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the save location if prompted"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify download progress is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the download completes successfully"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Fetch video information from a valid URL",
+    "description": "A user can paste a valid video URL, fetch the video details, and see the information preview needed before downloading.",
+    "category": "Browser Downloader",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in a valid video URL into the video URL field"
+      },
+      {
+        "type": "action",
+        "description": "Click the control to fetch video information"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the video information preview is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the video thumbnail and metadata are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "View advanced format choices and download a specific format",
+    "description": "This verifies that a user can open advanced format selection, compare format groups, choose a specific format, and start a download from that selection.",
+    "category": "Advanced Format Selection",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in a valid video URL"
+      },
+      {
+        "type": "action",
+        "description": "Click the fetch video info control"
+      },
+      {
+        "type": "action",
+        "description": "Open advanced format selection"
+      },
+      {
+        "type": "action",
+        "description": "Switch between combined, video only, and audio only formats"
+      },
+      {
+        "type": "action",
+        "description": "Choose a specific format to download"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the save location if prompted"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the selected format download starts"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the download completes successfully"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Download with save location handling in a supported browser",
+    "description": "A user in a browser that supports save location prompts can start a download, confirm progress, and complete the save flow.",
+    "category": "Browser Downloader",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in a valid video URL into the video URL field"
+      },
+      {
+        "type": "action",
+        "description": "Click the control to fetch video information"
+      },
+      {
+        "type": "action",
+        "description": "Click the preset quality download option"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a save location prompt is handled and download progress is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the download completes successfully"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Block invalid video URLs before fetching",
+    "description": "This verifies that an invalid or unsupported video URL is rejected and the user sees validation feedback instead of a video preview.",
+    "category": "Paste Video URL and Fetch Video Info",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in an invalid video URL"
+      },
+      {
+        "type": "action",
+        "description": "Click the fetch video info control"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a validation error is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the video information preview is not displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Browse advanced formats and download a specific format",
+    "description": "A user can open advanced format selection, compare available format groups, choose a specific format, and start a download.",
+    "category": "Browser Downloader",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in a valid video URL into the video URL field"
+      },
+      {
+        "type": "action",
+        "description": "Click the control to fetch video information"
+      },
+      {
+        "type": "action",
+        "description": "Open the advanced format selection"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the combined, video-only, and audio-only format groups are displayed"
+      },
+      {
+        "type": "action",
+        "description": "Choose a specific format to download"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the download begins"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Resume after correcting an invalid URL",
+    "description": "This verifies that a user can recover from an invalid URL, submit a corrected URL, and proceed to a successful download.",
+    "category": "Paste Video URL and Fetch Video Info",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in an invalid video URL"
+      },
+      {
+        "type": "action",
+        "description": "Click the fetch video info control"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a validation error is visible"
+      },
+      {
+        "type": "action",
+        "description": "Replace the URL with a valid video URL"
+      },
+      {
+        "type": "action",
+        "description": "Click the fetch video info control"
+      },
+      {
+        "type": "action",
+        "description": "Choose a preset quality download option"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the save location if prompted"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the download completes successfully"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "Monitor download progress during a long download",
+    "description": "This verifies that a user can watch download progress feedback while a video is being saved and see completion state when finished.",
+    "category": "Quick Download",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in a valid video URL"
+      },
+      {
+        "type": "action",
+        "description": "Click the fetch video info control"
+      },
+      {
+        "type": "action",
+        "description": "Choose a preset quality download option"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the save location if prompted"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify download progress feedback is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the completed download state is visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "Reset after a completed download and start a new session",
+    "description": "A user can clear the finished download state with New Download and begin a second download session from scratch.",
+    "category": "Browser Downloader",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in a valid video URL into the video URL field"
+      },
+      {
+        "type": "action",
+        "description": "Click the control to fetch video information"
+      },
+      {
+        "type": "action",
+        "description": "Click the preset quality download option"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the download completes successfully"
+      },
+      {
+        "type": "action",
+        "description": "Click the control to start a new download"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the download form is reset and ready for another URL"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC011",
+    "title": "Start another download after resetting",
+    "description": "This verifies that a user can clear the completed session with New Download and immediately begin a second download workflow.",
+    "category": "New Download Reset",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in a valid video URL"
+      },
+      {
+        "type": "action",
+        "description": "Click the fetch video info control"
+      },
+      {
+        "type": "action",
+        "description": "Choose a preset quality download option"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the save location if prompted"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the completed download state is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click the new download control"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the page returns to the initial input state"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC012",
+    "title": "Switch between quick and advanced download modes",
+    "description": "A user can move between the preset quick download view and advanced format selection while keeping the fetched video information available.",
+    "category": "Browser Downloader",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in a valid video URL into the video URL field"
+      },
+      {
+        "type": "action",
+        "description": "Click the control to fetch video information"
+      },
+      {
+        "type": "action",
+        "description": "Open the advanced format selection"
+      },
+      {
+        "type": "action",
+        "description": "Return to the quick download view"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the fetched video information remains displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the quick download options are displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC013",
+    "title": "Retry downloading from the advanced view after a reset",
+    "description": "This verifies that a user can open advanced formats, complete a download, reset the session, and access advanced selection again for another download.",
+    "category": "Advanced Format Selection",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in a valid video URL"
+      },
+      {
+        "type": "action",
+        "description": "Click the fetch video info control"
+      },
+      {
+        "type": "action",
+        "description": "Open advanced format selection"
+      },
+      {
+        "type": "action",
+        "description": "Choose a specific format to download"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the save location if prompted"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the download completes successfully"
+      },
+      {
+        "type": "action",
+        "description": "Click the new download control"
+      },
+      {
+        "type": "action",
+        "description": "Open advanced format selection"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify advanced format selection is available again"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC014",
+    "title": "Enter a URL by pasting and submitting with keyboard",
+    "description": "A user can paste a video URL, submit it with the keyboard, and reach the fetched information preview without using the mouse to submit.",
+    "category": "Browser Downloader",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in a valid video URL into the video URL field"
+      },
+      {
+        "type": "action",
+        "description": "Press Enter"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the video information preview is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC015",
+    "title": "Show an empty or unsupported URL error",
+    "description": "A user sees an error when attempting to fetch info without a usable video URL and can then correct the input.",
+    "category": "Browser Downloader",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Leave the video URL field empty"
+      },
+      {
+        "type": "action",
+        "description": "Click the control to fetch video information"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a validation error is visible"
+      },
+      {
+        "type": "action",
+        "description": "Fill in a valid video URL into the video URL field"
+      },
+      {
+        "type": "action",
+        "description": "Click the control to fetch video information"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the video information preview is displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC016",
+    "title": "Start a new session after completing a download",
+    "description": "This test verifies that a completed download can be reset so the user can begin a fresh download session.",
+    "category": "Reset for New Scenario",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Paste a valid video URL into the video URL field"
+      },
+      {
+        "type": "action",
+        "description": "Fetch the video information"
+      },
+      {
+        "type": "action",
+        "description": "Start a quick download at a preset quality"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the download to complete"
+      },
+      {
+        "type": "action",
+        "description": "Start a new download session"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the video URL field is empty"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the download setup is reset"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC017",
+    "title": "Continue a download when progress is indeterminate",
+    "description": "A user can start a download and still see meaningful in-progress and completion states even when percentage progress is unavailable.",
+    "category": "Browser Downloader",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Fill in a valid video URL into the video URL field"
+      },
+      {
+        "type": "action",
+        "description": "Click the control to fetch video information"
+      },
+      {
+        "type": "action",
+        "description": "Click the preset quality download option"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an in-progress download state is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the download completes successfully"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC018",
+    "title": "Clear the current setup to prepare a new download",
+    "description": "This test verifies that the reset action clears the current download state so the user can enter a new video URL.",
+    "category": "Reset for New Scenario",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Paste a valid video URL into the video URL field"
+      },
+      {
+        "type": "action",
+        "description": "Fetch the video information"
+      },
+      {
+        "type": "action",
+        "description": "Start a quick download at a preset quality"
+      },
+      {
+        "type": "action",
+        "description": "Start a new download session"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the current video information is cleared"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the app is ready for a new download"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC019",
+    "title": "Enter a new video URL after resetting",
+    "description": "This test verifies that the user can reset the current session and enter a different video URL for a new download.",
+    "category": "Reset for New Scenario",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Paste a valid video URL into the video URL field"
+      },
+      {
+        "type": "action",
+        "description": "Fetch the video information"
+      },
+      {
+        "type": "action",
+        "description": "Start a quick download at a preset quality"
+      },
+      {
+        "type": "action",
+        "description": "Start a new download session"
+      },
+      {
+        "type": "action",
+        "description": "Paste a different valid video URL into the video URL field"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new video URL is accepted"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify new video information can be fetched"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC020",
+    "title": "Reset after an unfinished download setup",
+    "description": "This test verifies that the reset action returns the app to an empty state even if the user has only prepared a download and not completed it.",
+    "category": "Reset for New Scenario",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Paste a valid video URL into the video URL field"
+      },
+      {
+        "type": "action",
+        "description": "Fetch the video information"
+      },
+      {
+        "type": "action",
+        "description": "Select a preset quality download option"
+      },
+      {
+        "type": "action",
+        "description": "Start a new download session"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the download controls are cleared"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the video URL field is empty"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC021",
+    "title": "Repeat reset without losing the empty state",
+    "description": "This test verifies that clicking reset multiple times leaves the app in a clean state ready for a new download.",
+    "category": "Reset for New Scenario",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Paste a valid video URL into the video URL field"
+      },
+      {
+        "type": "action",
+        "description": "Fetch the video information"
+      },
+      {
+        "type": "action",
+        "description": "Start a quick download at a preset quality"
+      },
+      {
+        "type": "action",
+        "description": "Start a new download session"
+      },
+      {
+        "type": "action",
+        "description": "Start a new download session again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the app remains in an empty state"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no previous download details are shown"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC022",
+    "title": "Verify platform badge is shown for a YouTube video",
+    "description": "After fetching a YouTube URL, verify that the correct platform badge with YouTube label and brand color is displayed.",
+    "category": "Video Info Display",
+    "steps": [
+      { "type": "action", "description": "Navigate to /" },
+      { "type": "action", "description": "Fill in a valid YouTube video URL (https://www.youtube.com/watch?v=dQw4w9WgXcQ)" },
+      { "type": "action", "description": "Click the fetch video info control" },
+      { "type": "assertion", "description": "Verify a platform badge element is visible containing the text 'youtube'" },
+      { "type": "assertion", "description": "Verify the video title is not empty" }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC023",
+    "title": "Verify estimated file sizes are shown on quick download cards",
+    "description": "After fetching video info, the quick download section should display estimated file sizes next to each quality option.",
+    "category": "Quick Download",
+    "steps": [
+      { "type": "action", "description": "Navigate to /" },
+      { "type": "action", "description": "Fill in a valid YouTube video URL" },
+      { "type": "action", "description": "Click the fetch video info control" },
+      { "type": "assertion", "description": "Verify quick download quality cards are displayed" },
+      { "type": "assertion", "description": "Verify at least one quality card shows an estimated file size containing MB or GB" }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC024",
+    "title": "Verify 3D floating background icons render on page load",
+    "description": "The page background should contain floating 3D app icons (YouTube, Instagram, TikTok, etc.) rendered as div elements.",
+    "category": "UI Visual Elements",
+    "steps": [
+      { "type": "action", "description": "Navigate to /" },
+      { "type": "assertion", "description": "Verify the background icons container (id='bgIcons') exists in the DOM" },
+      { "type": "assertion", "description": "Verify there are multiple child elements with class 'bg-icon' inside the container" }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC025",
+    "title": "Verify tab switching shows correct format counts",
+    "description": "After fetching video info, switching between Combined, Video Only, and Audio Only tabs should update the displayed format list.",
+    "category": "Advanced Format Selection",
+    "steps": [
+      { "type": "action", "description": "Navigate to /" },
+      { "type": "action", "description": "Fill in a valid YouTube video URL" },
+      { "type": "action", "description": "Click the fetch video info control" },
+      { "type": "action", "description": "Open advanced format selection" },
+      { "type": "action", "description": "Click the 'Video Only' tab" },
+      { "type": "assertion", "description": "Verify the Video Only tab is now active" },
+      { "type": "action", "description": "Click the 'Audio Only' tab" },
+      { "type": "assertion", "description": "Verify the Audio Only tab is now active" },
+      { "type": "assertion", "description": "Verify format cards are displayed for the selected tab" }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC026",
+    "title": "Verify error toast appears and disappears for invalid URL",
+    "description": "When a user submits a non-video URL, an error toast should appear. It should be visible with an error message.",
+    "category": "Error Handling",
+    "steps": [
+      { "type": "action", "description": "Navigate to /" },
+      { "type": "action", "description": "Fill in an invalid URL like 'https://www.google.com'" },
+      { "type": "action", "description": "Click the fetch video info control" },
+      { "type": "assertion", "description": "Verify the error toast element becomes visible" },
+      { "type": "assertion", "description": "Verify the error toast contains an error message text" }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC027",
+    "title": "Verify input field has focus on page load",
+    "description": "When the page first loads, the URL input field should be automatically focused so the user can start typing immediately.",
+    "category": "UI Usability",
+    "steps": [
+      { "type": "action", "description": "Navigate to /" },
+      { "type": "assertion", "description": "Verify the URL input field (id='urlInput') is focused" }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC028",
+    "title": "Verify video duration is displayed after fetching info",
+    "description": "After fetching info for a video, the duration should be shown on the video preview card.",
+    "category": "Video Info Display",
+    "steps": [
+      { "type": "action", "description": "Navigate to /" },
+      { "type": "action", "description": "Fill in a valid YouTube video URL" },
+      { "type": "action", "description": "Click the fetch video info control" },
+      { "type": "assertion", "description": "Verify the video duration element is visible and contains a time format (e.g., numbers with colon separator)" }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC029",
+    "title": "Verify Fetch button is disabled when input is empty",
+    "description": "The Get Video Info button should be disabled when the URL input field is empty, preventing empty submissions.",
+    "category": "Input Validation",
+    "steps": [
+      { "type": "action", "description": "Navigate to /" },
+      { "type": "assertion", "description": "Verify the URL input field is empty" },
+      { "type": "assertion", "description": "Verify the fetch button (id='fetchBtn') is disabled" },
+      { "type": "action", "description": "Type a URL into the input field" },
+      { "type": "assertion", "description": "Verify the fetch button is now enabled" },
+      { "type": "action", "description": "Clear the input field" },
+      { "type": "assertion", "description": "Verify the fetch button is disabled again" }
+    ],
+    "priority": "High"
+  }
+]
